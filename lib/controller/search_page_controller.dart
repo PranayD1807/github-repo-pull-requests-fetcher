@@ -67,7 +67,7 @@ class SearchController extends GetxController {
   void searchPullRequests() {
     // Reset
     pagingControllerClosedPR.refresh();
-    pagingControllerClosedPR.removePageRequestListener((pageKey) {});
+    // pagingControllerClosedPR.removePageRequestListener((pageKey) {});
 
     // Request New Data
     pagingControllerClosedPR.addPageRequestListener((pageKey) {
@@ -81,7 +81,7 @@ class SearchController extends GetxController {
 
     // Reset
     pagingControllerOpenPR.refresh();
-    pagingControllerOpenPR.removePageRequestListener((pageKey) {});
+    // pagingControllerOpenPR.removePageRequestListener((pageKey) {});
 
     // Request New Data
     pagingControllerOpenPR.addPageRequestListener((pageKey) {
