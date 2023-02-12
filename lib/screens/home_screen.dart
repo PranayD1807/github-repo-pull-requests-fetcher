@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:task_github_request_viewer/consts/app_assets.dart';
 import 'package:task_github_request_viewer/consts/app_color.dart';
+import 'package:task_github_request_viewer/consts/app_strings.dart';
 import 'package:task_github_request_viewer/controller/home_page_controller.dart';
 import 'package:task_github_request_viewer/widgets/postview.dart';
 
@@ -26,8 +27,7 @@ class HomeScreen extends StatelessWidget {
             tabs: homeController.tabs,
             indicatorSize: TabBarIndicatorSize.label,
           ),
-          title:
-              const Text("PranayD1807/github-repo-pull-requests-fetcher Repo"),
+          title: const Text("Github Repo Fetcher"),
           leading: const Center(
             child: SizedBox(
               height: 30,
@@ -43,13 +43,26 @@ class HomeScreen extends StatelessWidget {
           centerTitle: true,
         ),
         SliverFillRemaining(
-            child: TabBarView(
+            child: Column(
           children: [
-            PostView(
-              pagingController: homeController.pagingControllerClosedPR,
+            const Padding(
+              padding: EdgeInsets.only(left: 20.0, top: 20, right: 20),
+              child: Text(
+                AppStrings.mainPageRepo,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ),
-            PostView(
-              pagingController: homeController.pagingControllerOpenPR,
+            Expanded(
+              child: TabBarView(
+                children: [
+                  PostView(
+                    pagingController: homeController.pagingControllerClosedPR,
+                  ),
+                  PostView(
+                    pagingController: homeController.pagingControllerOpenPR,
+                  ),
+                ],
+              ),
             ),
           ],
         ))

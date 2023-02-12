@@ -77,6 +77,7 @@ class PostItem extends StatelessWidget {
                   style: const TextStyle(
                     color: AppColor.grey,
                     fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w300,
                   ),
                 ),
                 if (pullRequest.closedDate != null)
@@ -85,6 +86,7 @@ class PostItem extends StatelessWidget {
                     style: const TextStyle(
                       color: AppColor.grey,
                       fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w300,
                     ),
                   ),
               ],
