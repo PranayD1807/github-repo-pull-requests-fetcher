@@ -32,6 +32,8 @@ class HomeController extends GetxController {
       final newItems = await Api.getPullRequests(
         perPage: pageSize,
         pageNumber: pageKey,
+        owner: "PranayD1807",
+        repo: "github-repo-pull-requests-fetcher",
         state: controller == pagingControllerClosedPR ? "closed" : null,
       );
       final isLastPage = newItems.length < pageSize;
