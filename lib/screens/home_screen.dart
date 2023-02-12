@@ -26,7 +26,8 @@ class HomeScreen extends StatelessWidget {
             tabs: homeController.tabs,
             indicatorSize: TabBarIndicatorSize.label,
           ),
-          title: const Text("Flutter/Flutter Repo"),
+          title:
+              const Text("PranayD1807/github-repo-pull-requests-fetcher Repo"),
           leading: const Center(
             child: SizedBox(
               height: 30,
